@@ -1,0 +1,106 @@
+html,
+body {
+   box-sizing: border-box;
+   margin: 0;
+   height: 100%;
+   background-color: blanchedalmond;
+   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+   text-align: center;
+}
+
+.flex-wrapper {
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+.add-todo-wrapper {
+   display: flex;
+   width: 500px;
+   min-height: 20px;
+   align-items: center;
+   padding: 5px;
+   background-color: rgb(32, 96, 121);
+   border-radius: 5px;
+}
+
+.input-wrapper {
+   width: 80%;
+}
+
+.input-wrapper input {
+   width: 100%;
+   height: 22px;
+}
+
+.button-wrapper {
+   width: 19%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.button-wrapper button {
+   width: 80%;
+   color: whitesmoke;
+   background-color: rgb(182, 139, 223);
+   cursor: pointer;
+   outline: none;
+   border: none;
+   height: 25px;
+}
+
+.todo-item {
+   display: flex;
+   padding: 10px;
+   margin-bottom: 10px;
+   width: 500px;
+   min-height: 20px;
+   background-color: royalblue;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+
+.todo-item.checked {
+   background-color: darkgray;
+   opacity: 0.5;
+}
+
+.todo-item.delition {
+   animation: opacity 1s ease-in-out;
+}
+
+.description {
+   width: 80%;
+   display: flex;
+   align-items: center;
+   color: aliceblue;
+}
+
+.buttons {
+   width: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.buttons input {
+   width: 25px;
+   height: 25px;
+   cursor: pointer;
+}
+
+.buttons button {
+   width: 100px;
+   height: 20px;
+   background-color: red;
+   color: whitesmoke;
+   cursor: pointer;
+   border: 1px solid black;
+   border-radius: 3px;
+   margin-left: 6px;
+}
