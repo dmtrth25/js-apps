@@ -60,7 +60,7 @@ h1 {
    margin-bottom: 10px;
    width: 500px;
    min-height: 20px;
-   background-color: royalblue;
+   background-color: rgb(73, 136, 114);
    border: 1px solid black;
    border-radius: 5px;
 }
@@ -103,4 +103,13 @@ h1 {
    border: 1px solid black;
    border-radius: 3px;
    margin-left: 6px;
+}
+
+@keyframes opacity {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
 }
