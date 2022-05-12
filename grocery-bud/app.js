@@ -107,8 +107,16 @@ function deleteItem(e) {
 }
 
 // edit function
-function editItem() {
-   console.log('item edited');
+function editItem(e) {
+   const elem = e.currentTarget.parentElement.parentElement
+   // set edit item
+   editElement = e.currentTarget.parentElement.previousElementSibling
+   console.log(editElement)
+   // set form value
+   grocery.value = editElement.innerHTML
+   editFlag = true
+   editID = elem.dataset.id
+   submitBtn.textContent = 'edit'
 }
 // set back to default
 function setBackToDefault() {
