@@ -14,6 +14,8 @@ let editID = ''
 // ****** EVENT LISTENERS **********
 // submit form
 form.addEventListener('submit', addItem)
+// clear items
+clearBtn.addEventListener('click', clearItems)
 
 // ****** FUNCTIONS **********
 function addItem(e) {
@@ -60,6 +62,7 @@ function addItem(e) {
 function displayAlert(text, action) {
    alert.textContent = text
    alert.classList.add(`alert-${action}`)
+
    // remove alert
    setTimeout(() => {
       alert.textContent = ''
@@ -67,6 +70,31 @@ function displayAlert(text, action) {
    }, 1000)
 }
 
+// clear items
+function clearItems() {
+   const items = document.querySelectorAll('.grocery-item')
+
+   if(items.length > 0) {
+      items.forEach(function(item){
+         list.removeChild(item)
+      })
+   }
+   container.classList.remove('show-container')
+   displayAlert('emty list', 'danger')
+   setBackToDefault()
+   // localStorage.removeItem('list')
+}
+
+// set back to default
+function setBackToDefault() {
+   grocery.value = ''
+   editFlag = false
+   editID = ''
+   submitBtn.textContent = 'submit'
+}
 // ****** LOCAL STORAGE **********
+function addToLocalStorage(id, value) {
+   console.log('added')
+}
 
 // ****** SETUP ITEMS **********
